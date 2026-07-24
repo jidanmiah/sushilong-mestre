@@ -32,6 +32,8 @@ import ayceImg from "@/assets/ayce.jpg";
 import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
 import gallery3 from "@/assets/gallery3.jpg";
+import menuPranzoPdf from "@/assets/menu-pranzo.pdf.asset.json";
+import menuCenaPdf from "@/assets/menu-cena.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -346,6 +348,26 @@ function Index() {
               Una selezione dal banco. Chiedi allo chef cosa è arrivato oggi —
               la carta del pesce ruota con il mercato.
             </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={menuPranzoPdf.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-gold/60 bg-gold px-6 py-3 text-[11px] uppercase tracking-[0.28em] text-ink transition-all duration-300 hover:bg-transparent hover:text-gold"
+              >
+                <Utensils className="h-4 w-4" />
+                Menù Pranzo (PDF)
+              </a>
+              <a
+                href={menuCenaPdf.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-gold/60 px-6 py-3 text-[11px] uppercase tracking-[0.28em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink"
+              >
+                <Fish className="h-4 w-4" />
+                Menù Cena (PDF)
+              </a>
+            </div>
           </div>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
