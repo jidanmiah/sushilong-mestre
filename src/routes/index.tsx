@@ -80,6 +80,41 @@ const REVIEWS = [
       "Vieni per il nigiri, resti per l'atmosfera. Sembra un vero banco di Tokyo trapiantato a Venezia.",
     author: "Anna B.",
   },
+  {
+    quote:
+      "Ho visitato questo ristorante molte volte e ho sempre avuto un'esperienza meravigliosa. Il proprietario e tutto lo staff sono incredibilmente gentili, accoglienti e attenti, facendo sentire ogni ospite apprezzato.",
+    author: "Dung Nguyen",
+  },
+  {
+    quote:
+      "Il cibo è buono; hanno un buffet all-you-can-eat a 23,9€ oppure à la carte. Il ramen servito qui è ramen istantaneo con uovo fritto, non noodles freschi giapponesi.",
+    author: "N Ng",
+  },
+  {
+    quote:
+      "Ho provato questo ristorante all you can eat sushi mentre ero in città per lavoro. Il posto è molto moderno e accattivante. L'atmosfera era fantastica e ha reso tutto piacevole.",
+    author: "Miguel J",
+  },
+  {
+    quote:
+      "Delizioso: niente di quello che abbiamo ordinato era cattivo. I prezzi erano ottimi e anche il servizio eccellente.",
+    author: "Terrell Vick",
+  },
+  {
+    quote:
+      "Solido cibo asiatico. Sashimi di qualità decente, piatti fusion asiatici, buon servizio, bel interno e prezzi convenienti.",
+    author: "Emma Le",
+  },
+  {
+    quote:
+      "Siamo stati nelle vicinanze e questo posto di sushi non ha deluso. Decisamente vale il prezzo all you can eat!",
+    author: "Chau Phan",
+  },
+  {
+    quote:
+      "Volevo provare questo posto da molto tempo e dopo aver cenato qui posso consigliarlo per chi vuole fare un pasto con amici o famiglia. Ampia selezione di sushi, non solo roll, e prezzi buoni soprattutto se divisi con altre persone.",
+    author: "Darta Ivane",
+  },
 ];
 
 function Index() {
