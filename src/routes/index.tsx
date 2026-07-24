@@ -805,6 +805,16 @@ function Index() {
               </li>
               <li>
                 <a
+                  href="https://wa.me/393791481589"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-gold"
+                >
+                  <MessageCircle className="h-4 w-4" /> WhatsApp · 379 148 1589
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.google.com/maps/dir/?api=1&destination=Via+S.+Don%C3%A0,+156,+30174+Venezia+VE,+Italy"
                   target="_blank"
                   rel="noreferrer"
@@ -821,6 +831,16 @@ function Index() {
                   className="inline-flex items-center gap-2 hover:text-gold"
                 >
                   <Instagram className="h-4 w-4" /> @longmestre
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/people/Sushi-Long%E9%BE%8D-Mestre/100049105158638/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-gold"
+                >
+                  <Facebook className="h-4 w-4" /> Facebook
                 </a>
               </li>
             </ul>
