@@ -10,6 +10,14 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  MessageCircle,
+  Facebook,
+  Utensils,
+  Flame,
+  Fish,
+  AlertTriangle,
+  Baby,
+  Coffee,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
