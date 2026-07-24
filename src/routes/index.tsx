@@ -363,22 +363,221 @@ function Index() {
                 <span className="text-gold italic">Tutto il menù.</span>
               </h2>
               <p className="mt-6 text-cream/80">
-                Siediti, scegli il tuo ritmo, lascia che il banco mandi un
-                pezzo dopo l'altro. Nigiri, maki, tempura, ramen — tutto
-                incluso, tutto fresco al momento.
+                Giapponese & Asian Fusion. Siediti, scegli il tuo ritmo,
+                lascia che il banco mandi un pezzo dopo l'altro. Nigiri,
+                maki, tempura, ramen — tutto fresco al momento.
               </p>
-              <div className="mt-8 flex items-baseline gap-4">
-                <span className="font-display text-6xl text-crimson-glow">€22</span>
-                <span className="text-sm uppercase tracking-[0.32em] text-cream/70">
-                  a persona
-                </span>
-              </div>
               <a
                 href="tel:+390415343886"
-                className="mt-10 border border-gold/60 px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink"
+                className="mt-8 inline-block border border-gold/60 px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink"
               >
                 Prenota l'Esperienza
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ---- Pricing cards ---- */}
+        <div className="bg-ink-soft py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="reveal mx-auto max-w-2xl text-center">
+              <SectionEyebrow centered>Formula & Prezzi</SectionEyebrow>
+              <h2 className="mt-4 font-display text-4xl font-light text-cream md:text-5xl">
+                Scegli la tua tavolata.
+              </h2>
+            </div>
+
+            <div className="mt-14 grid gap-6 md:grid-cols-2">
+              {[
+                {
+                  label: "Menù Pranzo",
+                  price: "13,90",
+                  note: "a persona",
+                  detail: "Tutti i giorni, orario pranzo",
+                },
+                {
+                  label: "Menù Cena",
+                  price: "23,90",
+                  note: "a persona",
+                  detail: "Tutte le sere, orario cena",
+                  featured: true,
+                },
+              ].map((p) => (
+                <div
+                  key={p.label}
+                  className={`reveal relative overflow-hidden border p-10 text-center ${
+                    p.featured
+                      ? "border-gold bg-gradient-to-b from-crimson/20 to-ink"
+                      : "border-gold/25 bg-ink"
+                  }`}
+                >
+                  {p.featured && (
+                    <span className="absolute right-4 top-4 border border-gold/50 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-gold">
+                      Più Richiesto
+                    </span>
+                  )}
+                  <div className="text-[11px] uppercase tracking-[0.32em] text-gold">
+                    {p.label}
+                  </div>
+                  <div className="mt-6 flex items-start justify-center gap-1">
+                    <span className="mt-3 font-display text-2xl text-cream/70">€</span>
+                    <span className="font-display text-7xl leading-none text-cream">
+                      {p.price}
+                    </span>
+                  </div>
+                  <div className="mt-2 text-xs uppercase tracking-[0.32em] text-cream/60">
+                    {p.note}
+                  </div>
+                  <p className="mt-6 text-sm text-cream/70">{p.detail}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Info badges */}
+            <div className="mt-8 grid gap-4 md:grid-cols-4">
+              {[
+                {
+                  icon: <Utensils className="h-4 w-4" />,
+                  title: "Coperto",
+                  body: "€ 2,00 a persona",
+                },
+                {
+                  icon: <Baby className="h-4 w-4" />,
+                  title: "Bambini",
+                  body: "Sotto 120 cm pagano metà",
+                },
+                {
+                  icon: <Coffee className="h-4 w-4" />,
+                  title: "Esclusi",
+                  body: "Bevande, dolci e caffè",
+                },
+                {
+                  icon: <AlertTriangle className="h-4 w-4" />,
+                  title: "Anti-Spreco",
+                  body: "Cibo non consumato addebitato a listino",
+                  warn: true,
+                },
+              ].map((b) => (
+                <div
+                  key={b.title}
+                  className={`reveal border p-5 ${
+                    b.warn
+                      ? "border-crimson/50 bg-crimson/10"
+                      : "border-gold/20 bg-ink"
+                  }`}
+                >
+                  <div
+                    className={`flex items-center gap-2 text-[10px] uppercase tracking-[0.32em] ${
+                      b.warn ? "text-crimson-glow" : "text-gold"
+                    }`}
+                  >
+                    {b.icon}
+                    {b.title}
+                  </div>
+                  <p className="mt-3 text-sm text-cream/85">{b.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ---- Limits ---- */}
+        <div className="bg-ink py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="reveal mx-auto max-w-2xl text-center">
+              <SectionEyebrow centered>Limiti Ordinazione</SectionEyebrow>
+              <h2 className="mt-4 font-display text-4xl font-light text-cream md:text-5xl">
+                Regole della casa.
+              </h2>
+              <p className="mt-4 text-sm text-cream/65">
+                Per garantire qualità e freschezza a tutti i nostri ospiti.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-6 lg:grid-cols-2">
+              {/* Pranzo */}
+              <div className="reveal border border-gold/25 bg-ink-soft p-8">
+                <div className="flex items-center gap-3">
+                  <Clock className="h-4 w-4 text-gold" />
+                  <span className="text-[11px] uppercase tracking-[0.32em] text-gold">
+                    Menù Pranzo
+                  </span>
+                </div>
+                <ul className="mt-6 divide-y divide-gold/10">
+                  {[
+                    {
+                      icon: <Flame className="h-4 w-4 text-crimson-glow" />,
+                      name: "Piatti alla piastra",
+                      limit: "Max 2 volte / persona",
+                    },
+                    {
+                      icon: <Fish className="h-4 w-4 text-gold" />,
+                      name: "Sashimi di salmone (art. 156)",
+                      limit: "Max 2 volte / persona",
+                    },
+                  ].map((l) => (
+                    <li
+                      key={l.name}
+                      className="flex items-center justify-between gap-4 py-4"
+                    >
+                      <span className="flex items-center gap-3 text-sm text-cream/90">
+                        {l.icon}
+                        {l.name}
+                      </span>
+                      <span className="shrink-0 text-[10px] uppercase tracking-[0.28em] text-gold">
+                        {l.limit}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Cena */}
+              <div className="reveal border border-gold/40 bg-gradient-to-b from-ink-soft to-ink p-8">
+                <div className="flex items-center gap-3">
+                  <Clock className="h-4 w-4 text-gold" />
+                  <span className="text-[11px] uppercase tracking-[0.32em] text-gold">
+                    Menù Cena
+                  </span>
+                </div>
+                <ul className="mt-6 divide-y divide-gold/10">
+                  {[
+                    {
+                      icon: <Flame className="h-4 w-4 text-crimson-glow" />,
+                      name: "Piatti alla piastra",
+                      limit: "Max 10 porzioni / persona",
+                    },
+                    {
+                      icon: <Fish className="h-4 w-4 text-gold" />,
+                      name: "Carpacci & Sashimi",
+                      limit: "Max 10 porzioni / persona",
+                    },
+                    {
+                      icon: <Utensils className="h-4 w-4 text-gold" />,
+                      name: "Tartar",
+                      limit: "Max 10 porzioni / persona",
+                    },
+                    {
+                      icon: <Star className="h-4 w-4 fill-gold text-gold" />,
+                      name: "Speciali (Scampi sashimi, Chirashi black tartar, Tartar long style)",
+                      limit: "Max 2 volte / persona",
+                    },
+                  ].map((l) => (
+                    <li
+                      key={l.name}
+                      className="flex items-start justify-between gap-4 py-4"
+                    >
+                      <span className="flex items-start gap-3 text-sm text-cream/90">
+                        <span className="mt-0.5">{l.icon}</span>
+                        {l.name}
+                      </span>
+                      <span className="shrink-0 text-[10px] uppercase tracking-[0.28em] text-gold">
+                        {l.limit}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
