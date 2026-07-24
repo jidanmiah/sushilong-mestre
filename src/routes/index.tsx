@@ -30,46 +30,46 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV = [
-  { id: "story", label: "Our Story" },
-  { id: "menu", label: "Menu" },
-  { id: "ayce", label: "All-You-Can-Eat" },
-  { id: "gallery", label: "Gallery" },
-  { id: "visit", label: "Visit" },
+  { id: "story", label: "Chi Siamo" },
+  { id: "menu", label: "Menù" },
+  { id: "ayce", label: "All You Can Eat" },
+  { id: "gallery", label: "Galleria" },
+  { id: "visit", label: "Dove Siamo" },
 ];
 
 const MENU = [
-  { name: "Nigiri", desc: "Hand-pressed rice, single slice of the day's finest fish.", price: "€2.5 – €4.5", img: nigiriImg },
-  { name: "Sashimi", desc: "Salmon, tuna, sea bass — knife work above all.", price: "€8 – €18", img: sashimiImg },
-  { name: "Maki Rolls", desc: "Classic, uramaki and signature rolls with tobiko.", price: "€6 – €14", img: makiImg },
-  { name: "Tempura", desc: "Gambero, verdure — light, crisp, golden.", price: "€7 – €12", img: tempuraImg },
-  { name: "Ramen", desc: "Slow broth, noodles and a runny fried egg on top.", price: "€10", img: ramenImg },
+  { name: "Nigiri", desc: "Riso pressato a mano, una fetta del pesce migliore del giorno.", price: "€2,5 – €4,5", img: nigiriImg },
+  { name: "Sashimi", desc: "Salmone, tonno, branzino — il taglio prima di tutto.", price: "€8 – €18", img: sashimiImg },
+  { name: "Maki Roll", desc: "Classici, uramaki e roll d'autore con tobiko.", price: "€6 – €14", img: makiImg },
+  { name: "Tempura", desc: "Gambero, verdure — leggera, croccante, dorata.", price: "€7 – €12", img: tempuraImg },
+  { name: "Ramen", desc: "Brodo lento, noodles e uovo fritto morbido sopra.", price: "€10", img: ramenImg },
   { name: "Vegetariano", desc: "Avocado, cetriolo, fiori commestibili — l'orto in tavola.", price: "€5 – €10", img: veggieImg },
 ];
 
 const HOURS = [
-  { day: "Monday", hours: "12:00 – 15:00 · 19:00 – 23:00" },
-  { day: "Tuesday", hours: "12:00 – 15:00 · 19:00 – 23:00" },
-  { day: "Wednesday", hours: "12:00 – 15:00 · 19:00 – 23:00" },
-  { day: "Thursday", hours: "12:00 – 15:00 · 19:00 – 23:00" },
-  { day: "Friday", hours: "12:00 – 15:00 · 19:00 – 23:30" },
-  { day: "Saturday", hours: "12:00 – 15:30 · 19:00 – 23:30" },
-  { day: "Sunday", hours: "12:00 – 15:30 · 19:00 – 23:00" },
+  { day: "Lunedì", hours: "12:00 – 15:00 · 19:00 – 23:00" },
+  { day: "Martedì", hours: "12:00 – 15:00 · 19:00 – 23:00" },
+  { day: "Mercoledì", hours: "12:00 – 15:00 · 19:00 – 23:00" },
+  { day: "Giovedì", hours: "12:00 – 15:00 · 19:00 – 23:00" },
+  { day: "Venerdì", hours: "12:00 – 15:00 · 19:00 – 23:30" },
+  { day: "Sabato", hours: "12:00 – 15:30 · 19:00 – 23:30" },
+  { day: "Domenica", hours: "12:00 – 15:30 · 19:00 – 23:00" },
 ];
 
 const REVIEWS = [
   {
     quote:
-      "The all-you-can-eat is unbelievable — quality doesn't drop from the first piece to the last. The fried-egg ramen alone is worth the trip.",
+      "L'all you can eat è incredibile — la qualità non cala dal primo all'ultimo pezzo. Il ramen con l'uovo fritto vale da solo la visita.",
     author: "Giulia R.",
   },
   {
     quote:
-      "Elegant plating, warm service. Fruit-topped rolls sound strange until you taste them. Best sushi in Mestre, hands down.",
+      "Impiattamento elegante, servizio caloroso. I roll con la frutta sembrano strani finché non li assaggi. Il miglior sushi di Mestre, senza dubbio.",
     author: "Marco T.",
   },
   {
     quote:
-      "Come here for the nigiri, stay for the atmosphere. Feels like a real Tokyo counter dropped into Venezia.",
+      "Vieni per il nigiri, resti per l'atmosfera. Sembra un vero banco di Tokyo trapiantato a Venezia.",
     author: "Anna B.",
   },
 ];
@@ -140,10 +140,10 @@ function Index() {
               041 534 3886
             </a>
             <button
-              onClick={() => scrollTo("visit")}
+              onClick={() => { window.location.href = "tel:+390415343886"; }}
               className="hidden rounded-none border border-gold/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.28em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink lg:inline-block"
             >
-              Reserve
+              Prenota
             </button>
             <button
               className="lg:hidden text-cream"
@@ -207,8 +207,8 @@ function Index() {
             Sushi Long <span className="text-crimson-glow">龍</span>
           </h1>
           <p className="mt-6 max-w-xl text-balance text-base text-cream/80 sm:text-lg">
-            Japanese craftsmanship, Venetian hospitality. A moody counter for
-            nigiri, sashimi, ramen and an all-you-can-eat ritual.
+            L'arte del sushi giapponese nel cuore di Mestre. Nigiri, sashimi,
+            ramen e la nostra formula All You Can Eat.
           </p>
 
           <div className="mt-8 flex items-center gap-2 text-sm text-cream/90">
@@ -218,27 +218,27 @@ function Index() {
               ))}
             </span>
             <span className="tracking-wide">4.5</span>
-            <span className="text-cream/60">· 750+ Google reviews</span>
+            <span className="text-cream/60">· 750+ recensioni Google</span>
           </div>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <button
-              onClick={() => scrollTo("visit")}
+            <a
+              href="tel:+390415343886"
               className="group relative overflow-hidden bg-crimson px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-cream transition-all duration-300 hover:bg-crimson-glow hover:shadow-[0_18px_50px_-15px_rgba(179,18,46,0.7)] active:scale-[0.98]"
             >
-              Reserve a Table
-            </button>
+              Prenota un Tavolo
+            </a>
             <a
               href="tel:+390415343886"
               className="group border border-gold/50 px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink active:scale-[0.98]"
             >
-              Order Delivery
+              Ordina Online
             </a>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-cream/50">
-          Scroll
+          Scorri
         </div>
       </section>
 
@@ -252,28 +252,29 @@ function Index() {
         </span>
         <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:items-center">
           <div className="reveal">
-            <SectionEyebrow>Our Story</SectionEyebrow>
+            <SectionEyebrow>Chi Siamo</SectionEyebrow>
             <h2 className="mt-4 font-display text-5xl font-light leading-[1.05] text-cream md:text-6xl">
-              Precision at the counter,<br />
-              <span className="italic text-gold">warmth</span> at the table.
+              Precisione al banco,<br />
+              <span className="italic text-gold">calore</span> a tavola.
             </h2>
             <div className="mt-8 space-y-5 text-cream/75 leading-relaxed">
               <p>
-                Sushi Long 龍 was built around a simple idea: the discipline of
-                a Japanese sushi bar should never feel cold. In Mestre, a few
-                minutes from the Venetian lagoon, we set a dark counter, a
-                sharp knife and a long list of fish.
+                Sushi Long 龍 nasce da un'idea semplice: la disciplina di un
+                sushi bar giapponese non deve mai risultare fredda. A Mestre,
+                a pochi minuti dalla laguna veneziana, mettiamo un banco
+                scuro, una lama affilata e una lunga carta di pesce.
               </p>
               <p>
-                Every roll is cut to order, every bowl of ramen finished with
-                a fried egg over slow broth. Dine in for the full ritual, or
-                take it home — delivery and takeaway carry the same care.
+                Ogni roll è tagliato al momento, ogni ciotola di ramen
+                completata con un uovo fritto sul brodo lento. Cena da noi
+                per il rito completo, o portalo a casa — delivery e asporto
+                con la stessa cura.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-xs uppercase tracking-[0.32em] text-gold">
-              <span>Dine-in</span>
+              <span>In sala</span>
               <span className="text-gold/40">·</span>
-              <span>Takeaway</span>
+              <span>Asporto</span>
               <span className="text-gold/40">·</span>
               <span>Delivery</span>
             </div>
@@ -294,13 +295,13 @@ function Index() {
       <section id="menu" className="relative bg-ink-soft py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="reveal mx-auto max-w-2xl text-center">
-            <SectionEyebrow centered>The Menu</SectionEyebrow>
+            <SectionEyebrow centered>Il Menù</SectionEyebrow>
             <h2 className="mt-4 font-display text-5xl font-light text-cream md:text-6xl">
-              Cut, pressed, poured.
+              Tagliato, pressato, versato.
             </h2>
             <p className="mt-5 text-cream/70">
-              A selection from the counter. Ask the chef what's landed today —
-              the fish list rotates with the market.
+              Una selezione dal banco. Chiedi allo chef cosa è arrivato oggi —
+              la carta del pesce ruota con il mercato.
             </p>
           </div>
 
@@ -348,28 +349,28 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6">
             <div className="reveal max-w-xl">
-              <SectionEyebrow>All-You-Can-Eat</SectionEyebrow>
+              <SectionEyebrow>All You Can Eat</SectionEyebrow>
               <h2 className="mt-4 font-display text-5xl font-light leading-tight text-cream md:text-6xl">
-                One ritual.<br />
-                <span className="text-gold italic">Everything on the menu.</span>
+                Un rito.<br />
+                <span className="text-gold italic">Tutto il menù.</span>
               </h2>
               <p className="mt-6 text-cream/80">
-                Sit down, choose your pace, let the counter send piece after
-                piece. Nigiri, maki, tempura, ramen — all included, all fresh
-                to order.
+                Siediti, scegli il tuo ritmo, lascia che il banco mandi un
+                pezzo dopo l'altro. Nigiri, maki, tempura, ramen — tutto
+                incluso, tutto fresco al momento.
               </p>
               <div className="mt-8 flex items-baseline gap-4">
                 <span className="font-display text-6xl text-crimson-glow">€22</span>
                 <span className="text-sm uppercase tracking-[0.32em] text-cream/70">
-                  per person
+                  a persona
                 </span>
               </div>
-              <button
-                onClick={() => scrollTo("visit")}
+              <a
+                href="tel:+390415343886"
                 className="mt-10 border border-gold/60 px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink"
               >
-                Book the Experience
-              </button>
+                Prenota l'Esperienza
+              </a>
             </div>
           </div>
         </div>
@@ -379,9 +380,9 @@ function Index() {
       <section id="gallery" className="py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="reveal mx-auto max-w-2xl text-center">
-            <SectionEyebrow centered>Gallery</SectionEyebrow>
+            <SectionEyebrow centered>Galleria</SectionEyebrow>
             <h2 className="mt-4 font-display text-5xl font-light text-cream md:text-6xl">
-              From counter to camera.
+              Dal banco all'obiettivo.
             </h2>
           </div>
           <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
@@ -414,7 +415,7 @@ function Index() {
       {/* ================= REVIEWS ================= */}
       <section className="relative bg-ink-soft py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <SectionEyebrow centered>Guests</SectionEyebrow>
+          <SectionEyebrow centered>Ospiti</SectionEyebrow>
           <div className="mt-6 flex items-center justify-center gap-2">
             <span className="flex items-center gap-1 text-gold">
               {[0, 1, 2, 3, 4].map((i) => (
@@ -422,7 +423,7 @@ function Index() {
               ))}
             </span>
             <span className="font-display text-2xl text-cream">4.5</span>
-            <span className="text-sm text-cream/60">/ 5 · 750+ reviews on Google</span>
+            <span className="text-sm text-cream/60">/ 5 · 750+ recensioni su Google</span>
           </div>
 
           <div className="mt-14 relative min-h-[200px]">
@@ -478,9 +479,9 @@ function Index() {
       <section id="visit" className="py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="reveal mx-auto max-w-2xl text-center">
-            <SectionEyebrow centered>Visit Us</SectionEyebrow>
+            <SectionEyebrow centered>Dove Siamo</SectionEyebrow>
             <h2 className="mt-4 font-display text-5xl font-light text-cream md:text-6xl">
-              Find the counter.
+              Trova il banco.
             </h2>
           </div>
 
@@ -497,7 +498,7 @@ function Index() {
 
             <div className="reveal space-y-8">
               <div>
-                <h3 className="text-[11px] uppercase tracking-[0.32em] text-gold">Address</h3>
+                <h3 className="text-[11px] uppercase tracking-[0.32em] text-gold">Indirizzo</h3>
                 <a
                   href="https://www.google.com/maps/dir/?api=1&destination=Via+S.+Don%C3%A0,+156,+30174+Venezia+VE,+Italy"
                   target="_blank"
@@ -510,7 +511,7 @@ function Index() {
               </div>
 
               <div>
-                <h3 className="text-[11px] uppercase tracking-[0.32em] text-gold">Reserve · Order</h3>
+                <h3 className="text-[11px] uppercase tracking-[0.32em] text-gold">Prenota · Ordina</h3>
                 <a
                   href="tel:+390415343886"
                   className="mt-3 flex items-center gap-3 font-display text-2xl text-cream transition-colors hover:text-gold"
@@ -521,7 +522,7 @@ function Index() {
 
               <div>
                 <h3 className="flex items-center gap-2 text-[11px] uppercase tracking-[0.32em] text-gold">
-                  <Clock className="h-3.5 w-3.5" /> Hours
+                  <Clock className="h-3.5 w-3.5" /> Orari
                 </h3>
                 <dl className="mt-4 divide-y divide-gold/10 border-t border-gold/10">
                   {HOURS.map((h) => (
@@ -550,9 +551,9 @@ function Index() {
         </span>
         <div className="relative mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-[1.4fr_auto] md:items-center">
           <div>
-            <SectionEyebrow tone="cream">Tonight</SectionEyebrow>
+            <SectionEyebrow tone="cream">Stasera</SectionEyebrow>
             <h2 className="mt-3 font-display text-4xl font-light text-cream md:text-5xl">
-              Reserve a table, or bring the counter home.
+              Prenota un tavolo, o porta il banco a casa.
             </h2>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -560,14 +561,14 @@ function Index() {
               href="tel:+390415343886"
               className="border border-cream/70 bg-transparent px-8 py-4 text-center text-[11px] uppercase tracking-[0.32em] text-cream transition-all duration-300 hover:bg-cream hover:text-ink"
             >
-              Call 041 534 3886
+              Chiama 041 534 3886
             </a>
-            <button
-              onClick={() => scrollTo("visit")}
+            <a
+              href="tel:+390415343886"
               className="bg-ink px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-ink/80"
             >
-              Reserve a Table
-            </button>
+              Prenota un Tavolo
+            </a>
           </div>
         </div>
       </section>
@@ -584,13 +585,13 @@ function Index() {
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm text-cream/60">
-              Japanese craftsmanship, Venetian hospitality. Dine-in, takeaway
-              and delivery — every night of the week.
+              Artigianato giapponese, ospitalità veneziana. In sala, asporto
+              e delivery — ogni sera della settimana.
             </p>
           </div>
 
           <div>
-            <h4 className="text-[10px] uppercase tracking-[0.32em] text-gold">Contact</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.32em] text-gold">Contatti</h4>
             <ul className="mt-4 space-y-3 text-sm text-cream/80">
               <li>
                 <a href="tel:+390415343886" className="hover:text-gold">041 534 3886</a>
@@ -619,11 +620,11 @@ function Index() {
           </div>
 
           <div>
-            <h4 className="text-[10px] uppercase tracking-[0.32em] text-gold">Hours</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.32em] text-gold">Orari</h4>
             <ul className="mt-4 space-y-2 text-sm text-cream/70">
-              <li>Mon – Thu · 12:00 – 23:00</li>
-              <li>Fri – Sat · 12:00 – 23:30</li>
-              <li>Sunday · 12:00 – 23:00</li>
+              <li>Lun – Gio · 12:00 – 23:00</li>
+              <li>Ven – Sab · 12:00 – 23:30</li>
+              <li>Domenica · 12:00 – 23:00</li>
             </ul>
           </div>
         </div>
