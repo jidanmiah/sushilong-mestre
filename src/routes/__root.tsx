@@ -84,14 +84,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Sushi Long 龍 in Mestre, Venezia. Nigiri, sashimi, maki, tempura and an all-you-can-eat experience. Dine-in, takeaway and delivery.",
       },
       { name: "author", content: "Sushi Long Mestre" },
-      { property: "og:title", content: "Sushi Long 龍 Mestre" },
+      { property: "og:title", content: "Sushi Long 龍 Mestre — Japanese Sushi in Venezia" },
       {
         property: "og:description",
         content:
-          "Japanese craftsmanship, Venetian hospitality. Nigiri, sashimi, maki, ramen and all-you-can-eat sushi in Mestre.",
+          "Sushi Long 龍 in Mestre, Venezia. Nigiri, sashimi, maki, tempura and an all-you-can-eat experience. Dine-in, takeaway and delivery.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sushi Long 龍 Mestre — Japanese Sushi in Venezia" },
+      { name: "twitter:description", content: "Sushi Long 龍 in Mestre, Venezia. Nigiri, sashimi, maki, tempura and an all-you-can-eat experience. Dine-in, takeaway and delivery." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2911653f-ceb5-4cee-970f-6a3084420b90/id-preview-7682c21f--b22fed7f-b14c-4b75-9531-36d368d7dfba.lovable.app-1785018323865.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2911653f-ceb5-4cee-970f-6a3084420b90/id-preview-7682c21f--b22fed7f-b14c-4b75-9531-36d368d7dfba.lovable.app-1785018323865.png" },
     ],
     links: [
       {
