@@ -119,6 +119,21 @@ const REVIEWS = [
   },
 ];
 
+const TEL = "+390415343886";
+const handleCall = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  const href = `tel:${TEL}`;
+  try {
+    if (window.top && window.top !== window.self) {
+      window.top.location.href = href;
+      return;
+    }
+  } catch {
+    /* cross-origin frame: fall through */
+  }
+  window.location.href = href;
+};
+
 function Index() {
   useReveal();
   const [scrolled, setScrolled] = useState(false);
@@ -178,18 +193,22 @@ function Index() {
 
           <div className="flex items-center justify-end gap-3">
             <a
-              href="tel:+390415343886"
+              href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
               className="hidden items-center gap-2 text-xs uppercase tracking-[0.28em] text-cream/80 transition-colors hover:text-gold lg:inline-flex"
             >
               <Phone className="h-3.5 w-3.5" />
               041 534 3886
             </a>
-            <button
-              onClick={() => { window.location.href = "tel:+390415343886"; }}
+            <a
+              href={`tel:${TEL}`}
+              onClick={handleCall}
+              target="_top"
               className="hidden rounded-none border border-gold/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.28em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink lg:inline-block"
             >
               Prenota
-            </button>
+            </a>
             <button
               className="lg:hidden text-cream"
               onClick={() => setNavOpen((v) => !v)}
@@ -214,7 +233,9 @@ function Index() {
                 </button>
               ))}
               <a
-                href="tel:+390415343886"
+                href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
                 className="flex items-center gap-2 px-2 py-3 text-sm uppercase tracking-[0.28em] text-gold"
               >
                 <Phone className="h-4 w-4" /> 041 534 3886
@@ -268,13 +289,17 @@ function Index() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href="tel:+390415343886"
+              href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
               className="group relative overflow-hidden bg-crimson px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-cream transition-all duration-300 hover:bg-crimson-glow hover:shadow-[0_18px_50px_-15px_rgba(179,18,46,0.7)] active:scale-[0.98]"
             >
               Prenota un Tavolo
             </a>
             <a
-              href="tel:+390415343886"
+              href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
               className="group border border-gold/50 px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink active:scale-[0.98]"
             >
               Ordina Online
@@ -425,7 +450,9 @@ function Index() {
                 maki, tempura, ramen — tutto fresco al momento.
               </p>
               <a
-                href="tel:+390415343886"
+                href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
                 className="mt-8 inline-block border border-gold/60 px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-gold hover:text-ink"
               >
                 Prenota l'Esperienza
@@ -777,7 +804,9 @@ function Index() {
               <div>
                 <h3 className="text-[11px] uppercase tracking-[0.32em] text-gold">Prenota · Ordina</h3>
                 <a
-                  href="tel:+390415343886"
+                  href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
                   className="mt-3 flex items-center gap-3 font-display text-2xl text-cream transition-colors hover:text-gold"
                 >
                   <Phone className="h-4 w-4 text-gold" /> 041 534 3886
@@ -822,13 +851,17 @@ function Index() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
-              href="tel:+390415343886"
+              href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
               className="border border-cream/70 bg-transparent px-8 py-4 text-center text-[11px] uppercase tracking-[0.32em] text-cream transition-all duration-300 hover:bg-cream hover:text-ink"
             >
               Chiama 041 534 3886
             </a>
             <a
-              href="tel:+390415343886"
+              href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top"
               className="bg-ink px-8 py-4 text-[11px] uppercase tracking-[0.32em] text-gold transition-all duration-300 hover:bg-ink/80"
             >
               Prenota un Tavolo
@@ -858,7 +891,9 @@ function Index() {
             <h4 className="text-[10px] uppercase tracking-[0.32em] text-gold">Contatti</h4>
             <ul className="mt-4 space-y-3 text-sm text-cream/80">
               <li>
-                <a href="tel:+390415343886" className="hover:text-gold">041 534 3886</a>
+                <a href={`tel:${TEL}`}
+                onClick={handleCall}
+                target="_top" className="hover:text-gold">041 534 3886</a>
               </li>
               <li>
                 <a
